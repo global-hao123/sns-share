@@ -128,7 +128,7 @@ html snippet:
 
 simple bind a element:
 
-```html
+```javascript
 $("#snsShare").snsShare();
 ```
 
@@ -187,7 +187,7 @@ snsShare: {
 
 ## Options handling
 
-OverwritDataStructure > CMS config > Default options
+    OverwritDataStructure > CMS config > Default options
 
 Please pay attention to maintaining consistent data structure.
 
