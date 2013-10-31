@@ -94,7 +94,7 @@ First of all, you must know what is the default data structure:
 
 Common config in cms, like:
 
-```
+```javascript
 snsShare: {
     // ui: {},
     // services: {},
@@ -140,7 +140,7 @@ There are two ways to use it.
 
 Create with jQuery DOM:
 
-```
+```javascript
 // Only create facebook + twitter
 $("#snsShare").snsShare(OverwritDataStructure, ["facebook", "twitter"]);
 
@@ -166,7 +166,7 @@ $.snsShare(OverwritDataStructure);
 
 Very easy, you only need to:
 
-```
+```javascript
 $("#snsShare").snsShare({
     services: {
         "AnNewService": {
