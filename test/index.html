@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hao123</title>
+
+    <style>
+*{margin: 0; padding: 0;}
+    </style>
+    <link rel="stylesheet" href="../src/sns-share.css">
+    <script src="js/console.js"></script>
+    <script src="js/mod.js"></script>
+    <script src="js/js_framework.js"></script>
+    <script src="../src/sns-share.js"></script>
+</head>
+<body>
+
+<div id="snsShare"></div>
+<br>
+<div id="snsShare2"></div>
+
+
+<a href="#" onclick="return !1" id="snsShare3">share</a>
+</body>
+<script>
+$("#snsShare").snsShare({
+    ui:{
+        top: 0
+    },
+    info: {
+        url: "http://jp.hao123.com"
+        , image: "http://jp.hao123.com/static/web/common/img/fb-logo.png"
+        , summary: "summary"
+        , title: "title"
+        , input: "input"
+    }
+});
+
+$("#snsShare2").snsShare(null, ["twitter", "zingme"], function(data) {
+    data.info.url = "http://br.hao123.com";
+    return data;
+});
+
+$("#snsShare3").on("click", function() {
+    $.snsShare({
+        service: "twitter",
+        info: {
+            url: "http://hao123.com"
+        },
+        ui: {
+            left: 1000
+        }
+    })
+})
+</script>
+</html>
