@@ -195,7 +195,7 @@ Please pay attention to maintaining consistent data structure.
 
 |service  |  image | input | summary | title | description | lang
 | ------------- |:-----|:--------:| -----:| -----:| -----:| -----:|
-|facebook|√|×|√|√|×|×|
+|facebook|√(must be in the same domain with share url)|×|√|√|×|×|
 |twitter|×|√|×|×|×|×|
 |googleplus|- (only: microdata / Open Graph protocol / meta)|×|×|√|×|√|
 |zingme|√|√|×|√|√|×|
