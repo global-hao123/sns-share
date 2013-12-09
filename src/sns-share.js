@@ -69,6 +69,11 @@ $ && !function(WIN, DOC, NAV, plugin, undef) {
                 facebook: {
                     api: "https://www.facebook.com/sharer/sharer.php?s=100&p[title]=#{title}&p[summary]=#{summary}&p[images][0]=#{image}&p[url]=#{url}"
                 }
+
+                , facebook_feed: {
+                    api: "https://www.facebook.com/dialog/feed?app_id=#{app_id}&display=popup&caption=#{summary}&link=#{url}&redirect_uri=#{redirect_uri}&name=#{title}&picture=#{image}&description=#{description}"
+                    , active: false
+                }
                 
                 , twitter: {
                     api: "https://twitter.com/intent/tweet?text=#{input}&url=#{url}"
@@ -97,7 +102,7 @@ $ && !function(WIN, DOC, NAV, plugin, undef) {
                 url: WIN.location.href
                 , title: DOC.title
                 , summary: $("[name=title]").attr("content") || ""
-                , image: WIN.location.protocol+'//' + WIN.location.host + "/static/web/common/img/fb-logo.png"
+                , image: WIN.location.protocol + '//' + WIN.location.host + "/static/web/common/img/fb-logo.png"
                 , description: $("[name=description]").attr("content") || ""
                 , input: ""
                 , lang: NAV.browserLanguage || NAV.language || NAV.userLanguage || ""
@@ -153,7 +158,7 @@ $ && !function(WIN, DOC, NAV, plugin, undef) {
                 , inner: function(list, services, tpl) {
                     var ret = [];
                     $.each(list || services, function(k, v) {
-                        ret.push(replaceTpl(tpl, {
+                        v.active != 0 && ret.push(replaceTpl(tpl, {
                             service: list ? v : k
                         }));
                     });

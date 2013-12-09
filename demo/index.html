@@ -14,24 +14,35 @@
     <script src="../src/sns-share.js"></script>
 </head>
 <body>
-
+<h4>simple, default services list</h4>
 <div id="snsShare"></div>
 <br>
+
+<h4>custom services list</h4>
 <div id="snsShare2"></div>
 
-
+<h4>share direct</h4>
 <a href="#" onclick="return !1" id="snsShare3">share</a>
+
+<br>
+
+
+<h4>see more demo:</h4>
+
+<a href="share_image.html">how to share a picture</a>
+
 </body>
 <script>
+
 $("#snsShare").snsShare({
-    ui:{
+   ui:{
         top: 0
     },
     info: {
-        url: "http://jp.hao123.com"
-        , image: "http://jp.hao123.com/static/web/common/img/fb-logo.png"
+        url: "http://ar.hao123.com/?netest=" + +new Date
+        , image: "http://ar.hao123.com/resource/ar/img/i-hot-sprite-small_01.png"
         , summary: "summary"
-        , title: "title"
+        , title: "titlexxxx"
         , input: "input"
     }
 });
