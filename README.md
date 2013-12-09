@@ -53,6 +53,7 @@ First of all, you must know what is the default data structure:
     , services: {
         facebook: {
             api: "https://www.facebook.com/sharer/sharer.php?s=100&p[title]=#{title}&p[summary]=#{summary}&p[images][0]=#{image}&p[url]=#{url}"
+            , active: true
         }
         
         , twitter: {
