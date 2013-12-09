@@ -196,15 +196,23 @@ Please pay attention to maintaining consistent data structure.
 |service  |  image | input | summary | title | description | lang
 | ------------- |:-----|:--------:| -----:| -----:| -----:| -----:|
 |facebook|- (must be in the same domain with share url)|×|√|√|×|×|
+|facebook_feed|√|×|√|√|√|√|
 |twitter|×|√|×|×|×|×|
 |googleplus|- (only: microdata / Open Graph protocol / meta)|×|×|√|×|√|
 |zingme|√|√|×|√|√|×|
 
-Notice: The zingme URL must have the http protocol.
+Notice: 
+
+- The zingme URL must have the http protocol.
+- If you want share link with image, please use `facebook_feed` service.
 
 ## Contributing
 
 ## Release History
+
+* 2013/12/10 - v1.1.0
+    - [API] Now facebook share support any picture, even cross-domain, see: [share_image](http://view.gitlab.pro/common-ui/sns-share/raw/master/demo/share_image.html).
+    - [API] Add a new prop in service config: `active`.
 
 * 2013/10/31 - v0.1.0 - First release
 
