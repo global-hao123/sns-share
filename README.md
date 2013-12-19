@@ -164,7 +164,9 @@ Also you can direct share it
 $.snsShare(OverwritDataStructure);
 ```
 
-### Add an new service
+
+### Add a new service
+
 
 Very easy, you only need to:
 
