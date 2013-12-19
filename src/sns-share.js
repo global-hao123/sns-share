@@ -2,7 +2,7 @@
  * jQuery sns-share plugin
  * @author yuji@baidu.com
  * @update 2013/10/31
- * 
+ *
  * TODO:
  * 1. send to @wmf
  */
@@ -74,7 +74,7 @@ $ && !function(WIN, DOC, NAV, plugin, undef) {
                     api: "https://www.facebook.com/dialog/feed?app_id=#{app_id}&display=popup&caption=#{summary}&link=#{url}&redirect_uri=#{redirect_uri}&name=#{title}&picture=#{image}&description=#{description}"
                     , active: false
                 }
-                
+
                 , twitter: {
                     api: "https://twitter.com/intent/tweet?text=#{input}&url=#{url}"
                 }
@@ -137,7 +137,13 @@ $ && !function(WIN, DOC, NAV, plugin, undef) {
             });
 
             service = opts.services[service];
-            service && WIN.open(replaceTpl(service.api, info), "", replaceTpl(openWinConfig, ui));
+            if(service){
+                if(opts.ui.winHandle){
+                    opts.ui.winHandle.location.href = replaceTpl(service.api, info);
+                }else{
+                    WIN.open(replaceTpl(service.api, info), "", replaceTpl(openWinConfig, ui));
+                }
+            }
 
             return !1;
         }
