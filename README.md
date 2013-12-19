@@ -44,6 +44,7 @@ First of all, you must know what is the default data structure:
         , eventType: "click"
         , tplWrap: '<ul class="sns-share sns-share--#{skin}">#{inner}</ul>'
         , tplLi: '<li class="sns-share_li sns-share_li-#{service}"><a href="#" data-sns-share="#{service}" title="#{service}" hidefocus="true" onclick="return false"></a></li>'
+        , winHandle: landing window handle //redirect an existing window's href to share url to avoid browsers' block-new-window strategy
     }
 
     /**
