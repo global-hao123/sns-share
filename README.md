@@ -56,7 +56,7 @@ First of all, you must know what is the default data structure:
             api: "https://www.facebook.com/sharer/sharer.php?s=100&p[title]=#{title}&p[summary]=#{summary}&p[images][0]=#{image}&p[url]=#{url}"
             , active: true
         }
-        
+
         , twitter: {
             api: "https://twitter.com/intent/tweet?text=#{input}&url=#{url}"
         }
@@ -205,7 +205,7 @@ Please pay attention to maintaining consistent data structure.
 |googleplus|- (only: microdata / Open Graph protocol / meta)|×|×|√|×|√|
 |zingme|√|√|×|√|√|×|
 
-Notice: 
+Notice:
 
 - The zingme URL must have the http protocol.
 - If you want share link with image, please use `facebook_feed` service.
@@ -215,14 +215,14 @@ Notice:
 ## Release History
 
 * 2013/12/10 - v1.1.0
-    - [API] Now facebook share support any picture, even cross-domain, see: [share_image](http://view.gitlab.pro/common-ui/sns-share/raw/master/demo/share_image.html).
+    - [API] Now facebook share support any picture, even cross-domain, see: [share_image](http://global-hao123.github.io/sns-share/demo/share_image.html).
     - [API] Add a new prop in service config: `active`.
 
 * 2013/10/31 - v0.1.0 - First release
 
 ## License
 
-Copyright (c) 2012 Boaz Sender  
+Copyright (c) 2012 Boaz Sender
 Licensed under the MIT, GPL licenses.
 http://code.bocoup.com/license/
 
